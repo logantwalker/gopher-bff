@@ -10,7 +10,6 @@ export function NewGame(req: Request, res: Response) {
             res.json(data);
         })
         .catch((error: any) => {
-            console.log(error);
             res.json(error);
         });
 }
@@ -29,7 +28,6 @@ export function CommandUCI(req: Request, res: Response) {
             return res.json();
         })
         .then((data) => {
-            console.log(data);
             res.send(data); // Send the response back to the client
         })
         .catch((error) => res.status(500).send({ error: error.toString() }));
